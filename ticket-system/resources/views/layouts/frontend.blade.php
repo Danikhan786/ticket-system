@@ -37,8 +37,8 @@ https://templatemo.com/tm-583-festava-live
     <main>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    Festava Live
+                <a class="navbar-brand" href="{{route('index')}}">
+                   Film Fest - 25
                 </a>
 
                 <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
@@ -71,11 +71,11 @@ https://templatemo.com/tm-583-festava-live
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                            <a class="nav-link click-scroll" href="#section_6"> Venue</a>
                         </li>
                     </ul>
 
-                    <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
+                    <a href="{{route('form')}}" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
                 </div>
             </div>
         </nav>
@@ -90,12 +90,12 @@ https://templatemo.com/tm-583-festava-live
                 <div class="row">
 
                     <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-lg-0">Festava Live</h2>
+                        <h2 class="text-white mb-lg-0">Film Fest - 25 </h2>
                     </div>
 
                     <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
                         <ul class="social-icon d-flex justify-content-lg-end">
-                            <li class="social-icon-item">
+                            {{-- <li class="social-icon-item">
                                 <a href="#" class="social-icon-link">
                                     <span class="bi-twitter"></span>
                                 </a>
@@ -105,7 +105,7 @@ https://templatemo.com/tm-583-festava-live
                                 <a href="#" class="social-icon-link">
                                     <span class="bi-apple"></span>
                                 </a>
-                            </li>
+                            </li> --}}
 
                             <li class="social-icon-item">
                                 <a href="#" class="social-icon-link">
@@ -113,24 +113,24 @@ https://templatemo.com/tm-583-festava-live
                                 </a>
                             </li>
 
-                            <li class="social-icon-item">
+                            {{-- <li class="social-icon-item">
                                 <a href="#" class="social-icon-link">
                                     <span class="bi-youtube"></span>
                                 </a>
-                            </li>
+                            </li> --}}
 
-                            <li class="social-icon-item">
+                            {{-- <li class="social-icon-item">
                                 <a href="#" class="social-icon-link">
                                     <span class="bi-pinterest"></span>
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container">
+        {{-- <div class="container">
             <div class="row">
 
                 <div class="col-lg-6 col-12 mb-4 pb-2">
@@ -197,35 +197,9 @@ https://templatemo.com/tm-583-festava-live
                     </a>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        <div class="site-footer-bottom">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-12 mt-5">
-                        <p class="copyright-text">Copyright © 2036 Festava Live Company</p>
-                        <p class="copyright-text">Distributed by: <a href="https://themewagon.com">ThemeWagon</a></p>
-                    </div>
-
-                    <div class="col-lg-8 col-12 mt-lg-5">
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Privacy Policy</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Your Feedback</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
     </footer>
 
     <!--
