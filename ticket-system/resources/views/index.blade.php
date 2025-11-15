@@ -7,32 +7,32 @@
         <div class="container d-flex justify-content-center align-items-center">
             <div class="row">
 
-                <div class="col-12 mt-auto mb-5 text-center">
-                    <small>Organized By</small>
+                <div class="col-12 mt-auto mb-4 mb-md-5 text-center hero-content">
+                    <small class="d-block mb-2 mb-md-3">Organized By</small>
 
-                    <h1 class="text-white mb-5">Film & TV Society</h1>
+                    <h1 class="text-white mb-3 mb-md-5 hero-title">Film & TV Society</h1>
 
-                    <a class="btn custom-btn smoothscroll" href="#section_2">Let's begin</a>
+                    <a class="btn custom-btn smoothscroll mb-4 mb-md-0" href="#section_2">Let's begin</a>
                 </div>
 
-                <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
-                    <div class="date-wrap">
-                        <h5 class="text-white">
+                <div class="col-lg-12 col-12 mt-auto mt-md-4 d-flex flex-column flex-lg-row text-center hero-bottom-info">
+                    <div class="date-wrap mb-3 mb-lg-0">
+                        <h5 class="text-white mb-0">
                             <i class="custom-icon bi-clock me-2"></i>
-                            10 - 12<sup>th</sup>, Dec 2023
+                            10-11<sup>th</sup>, Dec 2025
                         </h5>
                     </div>
 
-                    <div class="location-wrap mx-auto py-3 py-lg-0">
-                        <h5 class="text-white">
+                    <div class="location-wrap mx-auto py-3 py-lg-0 mb-3 mb-lg-0">
+                        <h5 class="text-white mb-0">
                             <i class="custom-icon bi-geo-alt me-2"></i>
-                            National Center, United States
+                            IAC Amphitheatre
                         </h5>
                     </div>
 
                     <div class="social-share">
-                        <ul class="social-icon d-flex align-items-center justify-content-center">
-                            <span class="text-white me-3">Share:</span>
+                        <ul class="social-icon d-flex align-items-center justify-content-center mb-0">
+                            <span class="text-white me-3">Follow us:</span>
 
                             {{-- <li class="social-icon-item">
                                     <a href="#" class="social-icon-link">
@@ -47,7 +47,7 @@
                                 </li> --}}
 
                             <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
+                                <a href="https://www.instagram.com/iac_ftvsociety/" target="_blank" class="social-icon-link">
                                     <span class="bi-instagram"></span>
                                 </a>
                             </li>
@@ -73,28 +73,23 @@
 
                 <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
                     <div class="services-info">
-                        <h2 class="text-white mb-4">About Festava 2022</h2>
+                        <h2 class="text-white mb-4 text-center text-lg-start">About Film & Tv Society</h2>
 
-                        <p class="text-white">Festava Live is free CSS template provided by TemplateMo website. This
-                            layout is built on Bootstrap v5.2.2 CSS library. You are free to use this template for
-                            your commercial website.</p>
+                        <p class="text-white">The Department of Film & Tv in collabration with Film & Tv Society at the Institute for Art and Culture is a creative community for students passionate about cinema, television, and digital media. We provide a platform to explore filmmaking through screenings, workshops, and projects, bridging classroom learning with real-world practice. Believing in the power of storytelling to inspire and connect, we encourage members to experiment, collaborate, and showcase their unique voices while growing as future filmmakers and media creators.
 
-                        <h6 class="text-white mt-4">Once in Lifetime Experience</h6>
+</p>
+                        <h6 class="text-white mt-4">Over the past five years</h6>
 
-                        <p class="text-white">You are not allowed to redistribute the template ZIP file on any other
-                            website without a permission.</p>
+                        <p class="text-white">The society has become a vibrant community where students explore cinema through screenings, workshops, and projects bridging classroom learning with real-world practice.</p>
 
-                        <h6 class="text-white mt-4">Whole Night Party</h6>
-
-                        <p class="text-white">Please tell your friends about our website. Thank you.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-12">
                     <div class="about-text-wrap">
-                        <img src="frontend/images/pexels-alexander-suhorucov-6457579.jpg" class="about-image img-fluid">
+                        <img src="frontend/images/leaders/team.png" class="about-image img-fluid">
 
-                        <div class="about-text-info d-flex">
+                        {{-- <div class="about-text-info d-flex">
                             <div class="d-flex">
                                 <i class="about-text-icon bi-person"></i>
                             </div>
@@ -105,7 +100,7 @@
 
                                 <p class="mb-0">your amazing festival experience with us</p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -119,103 +114,155 @@
             <div class="row justify-content-center">
 
                 <div class="col-12 text-center">
-                    <h2 class="mb-4">Meet Artists</h1>
+                    <h2 class="mb-4">Current Leaderships</h1>
                 </div>
 
-                <div class="col-lg-5 col-12">
-                    <div class="artists-thumb">
-                        <div class="artists-image-wrap">
-                            <img src="frontend/images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg"
-                                class="artists-image img-fluid">
+                <div class="col-lg-10 col-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-md-4">
+                            <div class="artists-thumb h-100">
+                                <div class="artists-image-wrap">
+                                    <img src="{{asset('frontend/images/leaders/sir-sikandar.png')}}"
+                                        class="artists-image img-fluid" alt="Head of Department">
+                                </div>
+
+                                <div class="artists-hover ">
+                                    <p>
+                                        <strong  style="color:#610B0C;">Head of Department:</strong>
+                                    </p>
+
+                                    <p>
+                                        <strong style="color:#d1ceba;"> Mr. Sikandar Javed </strong>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="artists-thumb h-100">
+                                <div class="artists-image-wrap">
+                                    <img src="{{asset('frontend/images/leaders/sir-ali.jpg')}}"
+                                        class="artists-image img-fluid" alt="Festival Director">
+                                </div>
 
-                        <div class="artists-hover">
-                            <p>
-                                <strong>Name:</strong>
-                                Madona
-                            </p>
+                                <div class="artists-hover ">
+                                    <p>
+                                        <strong  style="color:#610B0C;">Festival Director:</strong>
+                                    </p>
 
-                            <p>
-                                <strong>Birthdate:</strong>
-                                August 16, 1958
-                            </p>
+                                    <p>
+                                        <strong style="color:#d1ceba;"> Mr. Ali Sultan  </strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="artists-thumb h-100">
+                                <div class="artists-image-wrap">
+                                    <img src="{{asset('frontend/images/leaders/sir-umar.png')}}"
+                                        class="artists-image img-fluid" alt="Assistant Professor">
+                                </div>
 
-                            <p>
-                                <strong>Music:</strong>
-                                Pop, R&amp;B
-                            </p>
+                                <div class="artists-hover ">
+                                    <p>
+                                        <strong  style="color:#610B0C;">Assistant Professor:</strong>
+                                    </p>
 
-                            <hr>
+                                    <p>
+                                        <strong style="color:#d1ceba;"> Mr. Umar Farooq (Asst. Prof) </strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="artists-thumb h-100">
+                                <div class="artists-image-wrap">
+                                    <img src="{{asset('frontend/images/leaders/faisal-nadeem.jpg')}}"
+                                        class="artists-image img-fluid" alt="Fest President">
+                                </div>
 
-                            <p class="mb-0">
-                                <strong>Youtube Channel:</strong>
-                                <a href="#">Madona Official</a>
-                            </p>
+                                <div class="artists-hover ">
+                                    <p>
+                                        <strong  style="color:#610B0C;">Fest President:</strong>
+                                    </p>
+
+                                    <p>
+                                        <strong style="color:#d1ceba;"> Faisal Nadeem  </strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="artists-thumb h-100">
+                                <div class="artists-image-wrap">
+                                    <img src="{{asset('frontend/images/leaders/shah-sab.jpg')}}"
+                                        class="artists-image img-fluid" alt="President">
+                                </div>
+
+                                <div class="artists-hover ">
+                                    <p>
+                                        <strong  style="color:#610B0C;">President:</strong>
+                                    </p>
+
+                                    <p>
+                                        <strong style="color:#d1ceba;"> Syed Jaffar Shah </strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="artists-thumb h-100">
+                                <div class="artists-image-wrap">
+                                    <img src="{{asset('frontend/images/leaders/haziq.jpg')}}"
+                                        class="artists-image img-fluid" alt="Vice President">
+                                </div>
+
+                                <div class="artists-hover ">
+                                    <p>
+                                        <strong  style="color:#610B0C;">Vice President:</strong>
+                                    </p>
+
+                                    <p>
+                                        <strong style="color:#d1ceba;"> Haziq Ammar </strong>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-5 col-12">
+                {{-- <div class="col-lg-4 col-12">
                     <div class="artists-thumb">
                         <div class="artists-image-wrap">
-                            <img src="frontend/images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg"
+                            <img src="frontend/images/leaders/sir-ali.jpg"
                                 class="artists-image img-fluid">
                         </div>
 
-                        <div class="artists-hover">
+                        <div class="artists-hover ">
                             <p>
-                                <strong>Name:</strong>
-                                Rihana
+                                <strong  style="color:#610B0C;">Festival Director:</strong>
                             </p>
 
                             <p>
-                                <strong>Birthdate:</strong>
-                                Feb 20, 1988
-                            </p>
-
-                            <p>
-                                <strong>Music:</strong>
-                                Country
-                            </p>
-
-                            <hr>
-
-                            <p class="mb-0">
-                                <strong>Youtube Channel:</strong>
-                                <a href="#">Rihana Official</a>
+                                <strong style="color:#610B0C;"> Mr. Ali Sultan  </strong>
                             </p>
                         </div>
                     </div>
 
                     <div class="artists-thumb">
-                        <img src="frontend/images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg"
+                        <img src="frontend/images/leaders/sir-umar.png"
                             class="artists-image img-fluid">
 
-                        <div class="artists-hover">
+                        <div class="artists-hover ">
                             <p>
-                                <strong>Name:</strong>
-                                Bruno Bros
+                                <strong  style="color:#610B0C;">Assistant Professor:</strong>
                             </p>
 
                             <p>
-                                <strong>Birthdate:</strong>
-                                October 8, 1985
-                            </p>
-
-                            <p>
-                                <strong>Music:</strong>
-                                Pop
-                            </p>
-
-                            <hr>
-
-                            <p class="mb-0">
-                                <strong>Youtube Channel:</strong>
-                                <a href="#">Bruno Official</a>
+                                <strong style="color:#610B0C;">  Mr. Umar Farooq (Asst. Prof) </strong>
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>
@@ -224,43 +271,39 @@
 
     <section class="schedule-section section-padding" id="section_4">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
 
-                <div class="col-12 text-center">
+                <div class="col-lg-8 col-12 text-center">
                     <h2 class="text-white mb-4">Event Schedule</h1>
 
                         <div class="table-responsive">
-                            <table class="schedule-table table table-dark">
+                            <table class="schedule-table table table-dark mx-auto" style="min-width: 100%;">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Date</th>
+                                        <th scope="col" class="text-nowrap">Date</th>
 
-                                        <th scope="col">Wednesday</th>
+                                        <th scope="col" class="text-nowrap">Wednesday</th>
 
-                                        <th scope="col">Thursday</th>
-
-                                        <th scope="col">Friday</th>
+                                        <th scope="col" class="text-nowrap">Thursday</th>
 
                                     </tr>
                                 </thead>
 
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Day 1</th>
+                                        <th scope="row">Day 1 <br> 10 <sup>th</sup> Dec</th>
+                                      {{-- pop-background-image --}}
+                                        <td class="table-background-image-wrap ">
+                                            <h3>Screening</h3>
 
-                                        <td class="table-background-image-wrap pop-background-image">
-                                            <h3>Pop Night</h3>
-
-                                            <p class="mb-2">5:00 - 7:00 PM</p>
-
-                                            <p>By Adele</p>
+                                            <p class="mb-2">Short Film <br> Documentry <br> Music Video <br> Animated Short</p>
 
                                             <div class="section-overlay"></div>
                                         </td>
 
                                         <td style="background-color: #F3DCD4"></td>
 
-                                        <td class="table-background-image-wrap rock-background-image">
+                                        {{-- <td class="table-background-image-wrap rock-background-image">
                                             <h3>Rock & Roll</h3>
 
                                             <p class="mb-2">7:00 - 11:00 PM</p>
@@ -268,26 +311,26 @@
                                             <p>By Rihana</p>
 
                                             <div class="section-overlay"></div>
-                                        </td>
+                                        </td> --}}
                                     </tr>
 
                                     <tr>
-                                        <th scope="row">Day 2</th>
+                                        <th scope="row">Day 2 <br> 11 <sup>th</sup> Dec</th>
 
                                         <td style="background-color: #ECC9C7"></td>
 
-                                        <td>
+                                        {{-- <td>
                                             <h3>DJ Night</h3>
 
                                             <p class="mb-2">6:30 - 9:30 PM</p>
 
                                             <p>By Rihana</p>
-                                        </td>
+                                        </td> --}}
 
                                         <td style="background-color: #D9E3DA"></td>
                                     </tr>
 
-                                    <tr>
+                                    {{-- <tr>
                                         <th scope="row">Day 3</th>
 
                                         <td class="table-background-image-wrap country-background-image">
@@ -309,7 +352,7 @@
 
                                             <p>By Members</p>
                                         </td>
-                                    </tr>
+                                    </tr> --}}
                                 </tbody>
                             </table>
                         </div>
@@ -324,10 +367,10 @@
             <div class="row">
 
                 <div class="col-lg-8 col-12 mx-auto">
-                    <h2 class="text-center mb-4">Plans, you' love</h2>
+                    <h2 class="text-center mb-4">Ticket Pricing</h2>
                 </div>
 
-                <div class="col-lg-6 col-12">
+                {{-- <div class="col-lg-6 col-12">
                     <div class="pricing-thumb">
                         <div class="d-flex">
                             <div>
@@ -360,40 +403,39 @@
                             </svg>
                         </a>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                <div class="col-lg-8 col-12 mx-auto mt-4 mt-lg-0">
                     <div class="pricing-thumb">
                         <div class="d-flex">
-                            <div>
+                            {{-- <div>
                                 <h3><small>Standard</small> $240</h3>
 
                                 <p>What makes a premium festava?</p>
-                            </div>
+                            </div> --}}
                         </div>
 
-                        <ul class="pricing-list mt-3">
-                            <li class="pricing-list-item">platform for potential customers</li>
+                        <ul class="pricing-list mt-3 d-flex flex-column flex-md-row gap-3 gap-md-4 justify-content-center">
 
-                            <li class="pricing-list-item">digital experience</li>
+                            <li class="pricing-list-item">Till 12, Nov : Rs 1000</li>
 
-                            <li class="pricing-list-item">high-quality sound</li>
+                            <li class="pricing-list-item">Till 21, Nov : Rs 1500</li>
 
-                            <li class="pricing-list-item">premium content</li>
-
-                            <li class="pricing-list-item">live chat support</li>
+                            <li class="pricing-list-item">After 21, Nov : Rs 2000</li>
                         </ul>
 
-                        <a class="link-fx-1 color-contrast-higher mt-4" href="{{route('form')}}">
-                            <span>Buy Ticket</span>
-                            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
-                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="16" cy="16" r="15.5"></circle>
-                                    <line x1="10" y1="18" x2="16" y2="12"></line>
-                                    <line x1="16" y1="12" x2="22" y2="18"></line>
-                                </g>
-                            </svg>
-                        </a>
+                        <div class="d-flex justify-content-center justify-content-md-end mt-4">
+                            <a class="link-fx-1 color-contrast-higher" href="{{route('form')}}">
+                                <span>Buy Ticket</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="16" cy="16" r="15.5"></circle>
+                                        <line x1="10" y1="18" x2="16" y2="12"></line>
+                                        <line x1="16" y1="12" x2="22" y2="18"></line>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -414,16 +456,16 @@
                             role="tablist">
 
 
-                            <button class="nav-link" id="nav-ContactMap-tab" data-bs-toggle="tab"
+                            <button class="nav-link active" id="nav-ContactMap-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-ContactMap" type="button" role="tab"
-                                aria-controls="nav-ContactMap" aria-selected="false">
+                                aria-controls="nav-ContactMap" aria-selected="true">
                                 <h5>Google Maps</h5>
                             </button>
                         </div>
                     </nav>
 
                     <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
-                        <div class="tab-pane fade" id="nav-ContactMap" role="tabpanel"
+                        <div class="tab-pane fade show active" id="nav-ContactMap" role="tabpanel"
                             aria-labelledby="nav-ContactMap-tab">
                             {{-- <iframe class="google-map"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29974.469402870927!2d120.94861466021855!3d14.106066818082482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd777b1ab54c8f%3A0x6ecc514451ce2be8!2sTagaytay%2C%20Cavite%2C%20Philippines!5e1!3m2!1sen!2smy!4v1670344209509!5m2!1sen!2smy"
@@ -432,7 +474,7 @@
 
                             <iframe  class="google-map"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.191466636965!2d74.22513197422612!3d31.408850452645794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919002e0ef04983%3A0x27a4185da643510b!2sInstitute%20for%20Art%20and%20Culture!5e0!3m2!1sen!2s!4v1763159788402!5m2!1sen!2s"
-                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                width="100%" height="450" style="border:0; min-height: 300px;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                             <!-- You can easily copy the embed code from Google Maps -> Share -> Embed a map // -->
                         </div>

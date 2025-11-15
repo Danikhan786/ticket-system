@@ -49,7 +49,7 @@
                                         <input class="form-check-input" type="radio" name="TicketForm"
                                             id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
-                                            Eary bird $120
+                                            Eary birds : Rs 1000
                                         </label>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@
                                         <input class="form-check-input" type="radio" name="TicketForm"
                                             id="flexRadioDefault2">
                                         <label class="form-check-label" for="flexRadioDefault2">
-                                            Standard $240
+                                            Till 21, Nov : Rs 1500
                                         </label>
                                     </div>
                                 </div>
@@ -68,26 +68,24 @@
                                         <input class="form-check-input" type="radio" name="TicketForm"
                                             id="flexRadioDefault3">
                                         <label class="form-check-label" for="flexRadioDefault3">
-                                            Premium $360
+                                            After 21, Nov : Rs 2000
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <h6>Account Details</h6>
+                            <h6>Our bank details</h6>
                             <div class="row mb-2">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <small class="form-text text-muted">Sadapay Account Name: <br> <b>Muhammad
-                                            Sufyan</b></small>
+                                    <small class="form-text text-muted">Sadapay Account Name: <br> <b>Faisal Nadeem</b></small>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <small class="form-text text-muted">Account Number: <br> <b>03319957331</b></small>
                                 </div>
                             </div>
                             <div class="row">
-                                <h6>Upload Account Screenshot</h6>
+                                <h6>Upload the bank payment receipt</h6>
                                 <div class="col-lg-12 col-md-12 col-12">
-                                    <small class="form-text text-muted mb-2">Please upload a screenshot of your account
-                                        details</small>
+                                    <small class="form-text text-muted mb-2">Please upload a screenshot of your transaction</small>
                                     <input type="file" name="ticket-form-account-screenshot"
                                         id="ticket-form-account-screenshot" class="form-control" accept="image/*" required>
                                 </div>

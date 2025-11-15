@@ -59,7 +59,7 @@ https://templatemo.com/tm-583-festava-live
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Artists</a>
+                            <a class="nav-link click-scroll" href="#section_3">Leaders</a>
                         </li>
 
                         <li class="nav-item">
@@ -90,11 +90,17 @@ https://templatemo.com/tm-583-festava-live
                 <div class="row">
 
                     <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-lg-0">Film Fest - 25 </h2>
+                        <h2 class="text-white mb-lg-0 mb-3">Film Fest - 25 </h2>
+                        
+                        <div class="footer-logos d-flex flex-row align-items-center justify-content-center justify-content-lg-start gap-3 gap-md-4 mt-4">
+                            <img src="{{asset('frontend/images/leaders/uni-logo.png')}}" alt="University Logo" class="footer-logo img-fluid" style="max-height: 80px;">
+                            <img src="{{asset('frontend/images/leaders/society-logo.png')}}" alt="Society Logo" class="footer-logo img-fluid" style="max-height: 80px;">
+                            <img src="{{asset('frontend/images/leaders/event-logo.png')}}" alt="Event Logo" class="footer-logo img-fluid" style="max-height: 80px;">
+                        </div>
                     </div>
 
-                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
-                        <ul class="social-icon d-flex justify-content-lg-end">
+                    <div class="col-lg-6 col-12 d-flex justify-content-center justify-content-lg-end align-items-end align-items-lg-center mt-4 mt-lg-0">
+                        <ul class="social-icon d-flex justify-content-end">
                             {{-- <li class="social-icon-item">
                                 <a href="#" class="social-icon-link">
                                     <span class="bi-twitter"></span>
@@ -108,7 +114,7 @@ https://templatemo.com/tm-583-festava-live
                             </li> --}}
 
                             <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
+                                <a href="https://www.instagram.com/iac_ftvsociety/" target="_blank" class="social-icon-link">
                                     <span class="bi-instagram"></span>
                                 </a>
                             </li>

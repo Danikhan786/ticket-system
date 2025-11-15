@@ -12,15 +12,15 @@ https://templatemo.com/tm-583-festava-live
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #F8CB2E;
-  --secondary-color:              #EE5007;
+  --primary-color:                #610B0C;
+  --secondary-color:              #7D3E39;
   --section-bg-color:             #f0f8ff;
-  --custom-btn-bg-color:          #EE5007;
-  --custom-btn-bg-hover-color:    #c01f27;
+  --custom-btn-bg-color:          #610B0C;
+  --custom-btn-bg-hover-color:    #45171A;
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
-  --link-hover-color:             #B22727;
+  --link-hover-color:             #610B0C;
 
   --body-font-family:             'Outfit', sans-serif;
 
@@ -478,11 +478,13 @@ strong {
   overflow: hidden;
   padding-top: 100px;
   height: calc(100vh - 51px);
+  min-height: 500px;
 }
 
 .hero-section small {
   color: var(--white-color);
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .hero-section .section-overlay {
@@ -492,13 +494,32 @@ strong {
 
 .hero-section .container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   height: 100%;
   padding-bottom: 50px;
+  padding-top: 20px;
 }
 
 .hero-section .container .row {
   height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 4;
+}
+
+.hero-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-bottom-info {
+  position: relative;
+  z-index: 4;
+}
+
+.hero-bottom-info h5 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -592,10 +613,22 @@ strong {
   margin-bottom: 30px;
 }
 
+.artists-image-wrap {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: var(--border-radius-medium);
+  position: relative;
+  background-color: #f0f0f0;
+}
+
 .artists-image {
   border-radius: var(--border-radius-medium);
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .artists-thumb:hover .artists-hover {
@@ -605,7 +638,7 @@ strong {
 
 .artists-hover {
   background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
+  background-color: rgba(209, 206, 186, 0.35);
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
@@ -960,11 +993,43 @@ strong {
   }
 
   .hero-section {
-    padding-top: 150px;
+    padding-top: 120px;
+    height: auto;
+    min-height: 600px;
+  }
+
+  .hero-section .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero-content {
+    padding: 20px 15px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  .hero-section small {
+    font-size: 12px;
+  }
+
+  .custom-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+    display: inline-block;
+    min-width: 150px;
   }
 
   .pricing-thumb {
     padding: 35px;
+  }
+
+  .artists-image-wrap {
+    height: 380px;
+    min-height: 380px;
   }
 
   .schedule-table h3 {
@@ -980,6 +1045,11 @@ strong {
     padding: 25px;
   }
 
+  .footer-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .ticket-section {
     padding-top: 130px;
   }
@@ -990,15 +1060,189 @@ strong {
 }
 
 @media screen and (max-width: 767px) {
+  .hero-section {
+    padding-top: 100px;
+    height: auto;
+    min-height: 500px;
+  }
+
+  .hero-section .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero-content {
+    padding: 15px 10px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-section small {
+    font-size: 11px;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-section .section-overlay {
+    opacity: 0.5;
+  }
+
   .custom-btn {
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    min-width: 140px;
+    display: inline-block;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-section .col-lg-12 {
+    margin-top: 0 !important;
+  }
+
+  .hero-bottom-info {
+    margin-top: 20px !important;
+    padding: 10px 0;
+  }
+
+  .hero-bottom-info h5 {
+    font-size: 16px;
+  }
+
+  .date-wrap,
+  .location-wrap,
+  .social-share {
+    margin-bottom: 15px;
+  }
+
+  .artists-image-wrap {
+    height: 350px;
+    min-height: 350px;
+    width: 100%;
+    display: block;
+  }
+
+  .artists-thumb {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .artists-image {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover;
+  }
+
+  .artists-section .col-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .pricing-thumb {
+    padding: 30px;
+  }
+
+  .google-map {
+    height: 350px !important;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 15px 10px;
+  }
+
+  .schedule-table h3 {
+    font-size: 20px;
+  }
+
+  .footer-logos {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .site-footer-top .row {
+    text-align: center;
+  }
+
+  .site-footer-top .col-lg-6:first-child {
+    text-align: center;
+  }
+
+  .site-footer-top .col-lg-6:last-child {
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    margin-top: 20px;
+  }
+
+  .footer-logo {
+    max-height: 60px !important;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .about-section .services-info {
+    text-align: center;
+  }
+
+  .pricing-list {
+    column-count: 1;
+    padding-left: 0;
   }
 }
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 52px;
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-section .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .hero-content {
+    padding: 10px 5px;
+  }
+
+  .custom-btn {
+    font-size: 13px;
+    padding: 10px 20px;
+    min-width: 130px;
+  }
+
+  .hero-section small {
+    font-size: 10px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-bottom-info {
+    margin-top: 15px !important;
+    padding: 5px 0;
+  }
+
+  .hero-bottom-info h5 {
+    font-size: 14px;
+  }
+
+  .date-wrap,
+  .location-wrap,
+  .social-share {
+    margin-bottom: 10px;
   }
 
   h2 {
@@ -1015,6 +1259,70 @@ strong {
 
   h5 {
     font-size: 20px;
+  }
+
+  .artists-image-wrap {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .artists-thumb {
+    margin-bottom: 20px;
+  }
+
+  .artists-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .pricing-thumb {
+    padding: 25px;
+  }
+
+  .footer-logo {
+    max-height: 50px !important;
+    max-width: 80px;
+  }
+
+  .site-footer-top .col-lg-6:last-child {
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+  }
+
+  .google-map {
+    height: 300px !important;
+  }
+
+  .schedule-table {
+    font-size: 14px;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px 5px;
+  }
+
+  .schedule-table h3 {
+    font-size: 18px;
+  }
+
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .about-section .services-info {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .pricing-list {
+    column-count: 1;
+    padding-left: 0;
   }
 }
 
