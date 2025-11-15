@@ -708,6 +708,11 @@ strong {
   padding: 30px;
 }
 
+.schedule-table th[scope="row"] {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .schedule-table tr:last-child th,
 .schedule-table tr:last-child td {
   border-bottom-color: transparent;

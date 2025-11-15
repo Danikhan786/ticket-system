@@ -291,7 +291,7 @@
 
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Day 1 <br> 10 <sup>th</sup> Dec</th>
+                                        <th scope="row" class="text-center align-middle">Day 1 <br> 10 <sup>th</sup> Dec</th>
                                       {{-- pop-background-image --}}
                                         <td class="table-background-image-wrap ">
                                             <h3>Screening</h3>
@@ -315,19 +315,17 @@
                                     </tr>
 
                                     <tr>
-                                        <th scope="row">Day 2 <br> 11 <sup>th</sup> Dec</th>
+                                        <th scope="row" class="text-center align-middle">Day 2 <br> 11 <sup>th</sup> Dec</th>
 
                                         <td style="background-color: #ECC9C7"></td>
 
-                                        {{-- <td>
-                                            <h3>DJ Night</h3>
+                                        <td>
+                                            <h3>Qawali Night</h3>
 
-                                            <p class="mb-2">6:30 - 9:30 PM</p>
+                                            <p class="mb-2">Time Reveal Soon... </p>
+                                        </td>
 
-                                            <p>By Rihana</p>
-                                        </td> --}}
-
-                                        <td style="background-color: #D9E3DA"></td>
+                                        {{-- <td style="background-color: #D9E3DA"></td> --}}
                                     </tr>
 
                                     {{-- <tr>
