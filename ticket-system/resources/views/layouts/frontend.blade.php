@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Bootstrap 5 CSS Template</title>
+    <title>Film Fest - 25 | IAC Film & TV Society</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

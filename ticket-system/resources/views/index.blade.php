@@ -47,7 +47,8 @@
                                 </li> --}}
 
                             <li class="social-icon-item">
-                                <a href="https://www.instagram.com/iac_ftvsociety/" target="_blank" class="social-icon-link">
+                                <a href="https://www.instagram.com/iac_ftvsociety/" target="_blank"
+                                    class="social-icon-link">
                                     <span class="bi-instagram"></span>
                                 </a>
                             </li>
@@ -66,8 +67,16 @@
         </div>
     </section>
 
-
+   
     <section class="about-section section-padding" id="section_2">
+        @if (session('success'))
+        <div class="container mt-4">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    @endif
         <div class="container">
             <div class="row">
 
@@ -75,12 +84,19 @@
                     <div class="services-info">
                         <h2 class="text-white mb-4 text-center text-lg-start">About Film & Tv Society</h2>
 
-                        <p class="text-white">The Department of Film & Tv in collabration with Film & Tv Society at the Institute for Art and Culture is a creative community for students passionate about cinema, television, and digital media. We provide a platform to explore filmmaking through screenings, workshops, and projects, bridging classroom learning with real-world practice. Believing in the power of storytelling to inspire and connect, we encourage members to experiment, collaborate, and showcase their unique voices while growing as future filmmakers and media creators.
+                        <p class="text-white">The Department of Film & Tv in collabration with Film & Tv Society at the
+                            Institute for Art and Culture is a creative community for students passionate about cinema,
+                            television, and digital media. We provide a platform to explore filmmaking through screenings,
+                            workshops, and projects, bridging classroom learning with real-world practice. Believing in the
+                            power of storytelling to inspire and connect, we encourage members to experiment, collaborate,
+                            and showcase their unique voices while growing as future filmmakers and media creators.
 
-</p>
+                        </p>
                         <h6 class="text-white mt-4">Over the past five years</h6>
 
-                        <p class="text-white">The society has become a vibrant community where students explore cinema through screenings, workshops, and projects bridging classroom learning with real-world practice.</p>
+                        <p class="text-white">The society has become a vibrant community where students explore cinema
+                            through screenings, workshops, and projects bridging classroom learning with real-world
+                            practice.</p>
 
                     </div>
                 </div>
@@ -122,13 +138,13 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-md-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{asset('frontend/images/leaders/sir-sikandar.png')}}"
+                                    <img src="{{ asset('frontend/images/leaders/sir-sikandar.png') }}"
                                         class="artists-image img-fluid" alt="Head of Department">
                                 </div>
 
                                 <div class="artists-hover ">
                                     <p>
-                                        <strong  style="color:#610B0C;">Head of Department:</strong>
+                                        <strong style="color:#610B0C;">Head of Department:</strong>
                                     </p>
 
                                     <p>
@@ -140,17 +156,17 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{asset('frontend/images/leaders/sir-ali.jpg')}}"
+                                    <img src="{{ asset('frontend/images/leaders/sir-ali.jpg') }}"
                                         class="artists-image img-fluid" alt="Festival Director">
                                 </div>
 
                                 <div class="artists-hover ">
                                     <p>
-                                        <strong  style="color:#610B0C;">Festival Director:</strong>
+                                        <strong style="color:#610B0C;">Festival Director:</strong>
                                     </p>
 
                                     <p>
-                                        <strong style="color:#d1ceba;"> Mr. Ali Sultan  </strong>
+                                        <strong style="color:#d1ceba;"> Mr. Ali Sultan </strong>
                                     </p>
                                 </div>
                             </div>
@@ -158,13 +174,13 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{asset('frontend/images/leaders/sir-umar.png')}}"
+                                    <img src="{{ asset('frontend/images/leaders/sir-umar.png') }}"
                                         class="artists-image img-fluid" alt="Assistant Professor">
                                 </div>
 
                                 <div class="artists-hover ">
                                     <p>
-                                        <strong  style="color:#610B0C;">Assistant Professor:</strong>
+                                        <strong style="color:#610B0C;">Assistant Professor:</strong>
                                     </p>
 
                                     <p>
@@ -176,17 +192,17 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{asset('frontend/images/leaders/faisal-nadeem.jpg')}}"
+                                    <img src="{{ asset('frontend/images/leaders/faisal-nadeem.jpg') }}"
                                         class="artists-image img-fluid" alt="Fest President">
                                 </div>
 
                                 <div class="artists-hover ">
                                     <p>
-                                        <strong  style="color:#610B0C;">Fest President:</strong>
+                                        <strong style="color:#610B0C;">Fest President:</strong>
                                     </p>
 
                                     <p>
-                                        <strong style="color:#d1ceba;"> Faisal Nadeem  </strong>
+                                        <strong style="color:#d1ceba;"> Faisal Nadeem </strong>
                                     </p>
                                 </div>
                             </div>
@@ -194,13 +210,13 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{asset('frontend/images/leaders/shah-sab.jpg')}}"
+                                    <img src="{{ asset('frontend/images/leaders/shah-sab.jpg') }}"
                                         class="artists-image img-fluid" alt="President">
                                 </div>
 
                                 <div class="artists-hover ">
                                     <p>
-                                        <strong  style="color:#610B0C;">President:</strong>
+                                        <strong style="color:#610B0C;">President:</strong>
                                     </p>
 
                                     <p>
@@ -212,13 +228,13 @@
                         <div class="col-lg-4 col-md-6 col-12 mb-4">
                             <div class="artists-thumb h-100">
                                 <div class="artists-image-wrap">
-                                    <img src="{{asset('frontend/images/leaders/haziq.jpg')}}"
+                                    <img src="{{ asset('frontend/images/leaders/haziq.jpg') }}"
                                         class="artists-image img-fluid" alt="Vice President">
                                 </div>
 
                                 <div class="artists-hover ">
                                     <p>
-                                        <strong  style="color:#610B0C;">Vice President:</strong>
+                                        <strong style="color:#610B0C;">Vice President:</strong>
                                     </p>
 
                                     <p>
@@ -291,12 +307,14 @@
 
                                 <tbody>
                                     <tr>
-                                        <th scope="row" class="text-center align-middle">Day 1 <br> 10 <sup>th</sup> Dec</th>
-                                      {{-- pop-background-image --}}
+                                        <th scope="row" class="text-center align-middle">Day 1 <br> 10 <sup>th</sup>
+                                            Dec</th>
+                                        {{-- pop-background-image --}}
                                         <td class="table-background-image-wrap ">
                                             <h3>Screening</h3>
 
-                                            <p class="mb-2">Short Film <br> Documentry <br> Music Video <br> Animated Short</p>
+                                            <p class="mb-2">Short Film <br> Documentry <br> Music Video <br> Animated
+                                                Short</p>
 
                                             <div class="section-overlay"></div>
                                         </td>
@@ -315,7 +333,8 @@
                                     </tr>
 
                                     <tr>
-                                        <th scope="row" class="text-center align-middle">Day 2 <br> 11 <sup>th</sup> Dec</th>
+                                        <th scope="row" class="text-center align-middle">Day 2 <br> 11 <sup>th</sup>
+                                            Dec</th>
 
                                         <td style="background-color: #ECC9C7"></td>
 
@@ -423,10 +442,11 @@
                         </ul>
 
                         <div class="d-flex justify-content-center justify-content-md-end mt-4">
-                            <a class="link-fx-1 color-contrast-higher" href="{{route('form')}}">
+                            <a class="link-fx-1 color-contrast-higher" href="{{ route('form') }}">
                                 <span>Buy Ticket</span>
                                 <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
-                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round">
                                         <circle cx="16" cy="16" r="15.5"></circle>
                                         <line x1="10" y1="18" x2="16" y2="12"></line>
                                         <line x1="16" y1="12" x2="22" y2="18"></line>
@@ -470,10 +490,10 @@
                                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
 
-                            <iframe  class="google-map"
+                            <iframe class="google-map"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.191466636965!2d74.22513197422612!3d31.408850452645794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919002e0ef04983%3A0x27a4185da643510b!2sInstitute%20for%20Art%20and%20Culture!5e0!3m2!1sen!2s!4v1763159788402!5m2!1sen!2s"
-                                width="100%" height="450" style="border:0; min-height: 300px;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                width="100%" height="450" style="border:0; min-height: 300px;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             <!-- You can easily copy the embed code from Google Maps -> Share -> Embed a map // -->
                         </div>
                     </div>
