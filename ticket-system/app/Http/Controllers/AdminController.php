@@ -129,5 +129,12 @@ class AdminController extends Controller
         
         return redirect()->back()->with('success', 'Ticket rejected successfully.');
     }
+
+    public function show($ticket_id)
+    {
+        $ticket = Ticket::where('ticket_id', $ticket_id)->firstOrFail();
+        
+        return view('admin.ticket-detail', compact('ticket'));
+    }
 }
 

@@ -21,6 +21,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/tickets/pending', [AdminController::class, 'pendingTickets'])->name('tickets.pending');
     Route::get('/tickets/rejected', [AdminController::class, 'rejectedTickets'])->name('tickets.rejected');
     Route::get('/tickets', [AdminController::class, 'allTickets'])->name('tickets.index');
+    Route::get('/tickets/{ticket_id}', [AdminController::class, 'show'])->name('tickets.show');
     Route::post('/tickets/{id}/verify', [AdminController::class, 'verifyTicket'])->name('tickets.verify');
     Route::post('/tickets/{id}/reject', [AdminController::class, 'rejectTicket'])->name('tickets.reject');
 });

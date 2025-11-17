@@ -149,6 +149,51 @@
         transform: translateY(-2px);
         box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
     }
+    
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: #ffffff;
+    }
+    
+    .btn-primary:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(97, 11, 12, 0.3);
+        color: #ffffff;
+    }
+    
+    .btn-secondary {
+        background-color: #6b7280;
+        color: #ffffff;
+    }
+    
+    .btn-secondary:hover {
+        background-color: #4b5563;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(107, 114, 128, 0.3);
+        color: #ffffff;
+    }
+    
+    .qr-code-img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    
+    .qr-code-img:hover {
+        transform: scale(1.1);
+        border-color: var(--primary-color);
+    }
+    
+    .qr-code-modal-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 </style>
 
 <div class="container" style="padding-top: 30px; padding-bottom: 50px;">
@@ -189,6 +234,7 @@
                                         <th>Student ID</th>
                                         <th>Department</th>
                                         <th>Semester</th>
+                                        <th>QR Code</th>
                                         <th>Transaction Screenshot</th>
                                         <th>Submitted At</th>
                                         <th>Actions</th>
@@ -204,6 +250,39 @@
                                             <td>{{ $ticket->student_id ?? 'N/A' }}</td>
                                             <td>{{ $ticket->department ?? 'N/A' }}</td>
                                             <td>{{ $ticket->semester ?? 'N/A' }}</td>
+                                            <td>
+                                                @if($ticket->qr_code_path && file_exists(public_path($ticket->qr_code_path)))
+                                                    <img src="{{ asset($ticket->qr_code_path) }}" 
+                                                         alt="QR Code" 
+                                                         class="qr-code-img" 
+                                                         data-bs-toggle="modal" 
+                                                         data-bs-target="#qrModal{{ $ticket->id }}">
+                                                    
+                                                    <!-- QR Code Modal -->
+                                                    <div class="modal fade" id="qrModal{{ $ticket->id }}" tabindex="-1" aria-labelledby="qrModalLabel{{ $ticket->id }}" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="qrModalLabel{{ $ticket->id }}">QR Code - {{ $ticket->ticket_id }}</h5>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body text-center">
+                                                                    <img src="{{ asset($ticket->qr_code_path) }}" 
+                                                                         alt="QR Code" 
+                                                                         class="qr-code-modal-img">
+                                                                    <p class="mt-3"><strong>Ticket ID:</strong> {{ $ticket->ticket_id }}</p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                    <a href="{{ asset($ticket->qr_code_path) }}" download class="btn btn-primary">Download QR Code</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @else
+                                                    <span class="text-muted">N/A</span>
+                                                @endif
+                                            </td>
                                             <td>
                                                 @if($ticket->transaction_screenshot)
                                                     <a href="{{ asset($ticket->transaction_screenshot) }}" target="_blank" class="btn btn-info btn-sm">View Screenshot</a>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Ticket;
 use Illuminate\Http\Request;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Illuminate\Support\Facades\Storage;
 
 class FrontendController extends Controller
 {
@@ -17,6 +19,14 @@ class FrontendController extends Controller
     {
         return view('form');
     }
+
+    /**
+     * Display ticket details
+     *
+     * @param string $ticket_id
+     * @return \Illuminate\View\View|\Illuminate\Http\RedirectResponse
+     */
+  
     
     public function store(Request $request)
     {
@@ -60,7 +70,45 @@ class FrontendController extends Controller
             'status' => 'pending',
         ]);
 
+        // Generate QR code for the ticket
+        $qrCodePath = $this->generateQrCode($ticket);
+        
+        // Update ticket with QR code path
+        $ticket->update([
+            'qr_code_path' => $qrCodePath
+        ]);
+
         return redirect()->route('index')->with('success', 'Ticket submitted successfully! Your ticket ID is ' . $ticket->ticket_id . '. Please wait for verification.');
+    }
+
+    /**
+     * Generate QR code for a ticket
+     *
+     * @param Ticket $ticket
+     * @return string
+     */
+    private function generateQrCode(Ticket $ticket): string
+    {
+        // Create qr-codes directory in public folder if it doesn't exist
+        $publicPath = public_path('qr-codes');
+        if (!file_exists($publicPath)) {
+            mkdir($publicPath, 0755, true);
+        }
+
+        // Generate QR code filename - using SVG format (no extension needed)
+        $filename = 'qr_' . $ticket->ticket_id . '_' . time() . '.svg';
+        $filePath = $publicPath . '/' . $filename;
+
+        // Generate QR code with ticket detail page URL
+        $ticketUrl = route('tickets.show', ['ticket_id' => $ticket->ticket_id]);
+        
+        QrCode::format('svg')
+            ->size(300)
+            ->margin(2)
+            ->generate($ticketUrl, $filePath);
+
+        // Return relative path for storage
+        return 'qr-codes/' . $filename;
     }
     
 }
