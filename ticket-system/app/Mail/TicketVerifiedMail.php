@@ -3,14 +3,12 @@
 namespace App\Mail;
 
 use App\Models\Ticket;
-use App\Services\QrCodeService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Storage;
 
 class TicketVerifiedMail extends Mailable
 {
@@ -59,10 +57,19 @@ class TicketVerifiedMail extends Mailable
         $attachments = [];
 
         // Attach QR code if exists
-        if ($this->ticket->qr_code_path && Storage::disk('public')->exists($this->ticket->qr_code_path)) {
-            $attachments[] = Attachment::fromStorageDisk('public', $this->ticket->qr_code_path)
-                ->as('ticket-qr-code.png')
-                ->withMime('image/png');
+        if ($this->ticket->qr_code_path) {
+            $qrCodeFullPath = public_path($this->ticket->qr_code_path);
+            
+            if (file_exists($qrCodeFullPath)) {
+                // Determine file extension and MIME type
+                $extension = pathinfo($qrCodeFullPath, PATHINFO_EXTENSION);
+                $mimeType = $extension === 'svg' ? 'image/svg+xml' : 'image/png';
+                $filename = 'ticket-qr-code.' . ($extension ?: 'png');
+                
+                $attachments[] = Attachment::fromPath($qrCodeFullPath)
+                    ->as($filename)
+                    ->withMime($mimeType);
+            }
         }
 
         return $attachments;
@@ -73,12 +80,23 @@ class TicketVerifiedMail extends Mailable
      */
     private function getQrCodeBase64(): ?string
     {
-        if (!$this->ticket->qr_code_path || !Storage::disk('public')->exists($this->ticket->qr_code_path)) {
+        if (!$this->ticket->qr_code_path) {
             return null;
         }
 
-        $qrCodeContent = Storage::disk('public')->get($this->ticket->qr_code_path);
-        return 'data:image/png;base64,' . base64_encode($qrCodeContent);
+        $qrCodeFullPath = public_path($this->ticket->qr_code_path);
+        
+        if (!file_exists($qrCodeFullPath)) {
+            return null;
+        }
+
+        $qrCodeContent = file_get_contents($qrCodeFullPath);
+        
+        // Determine MIME type based on file extension
+        $extension = pathinfo($qrCodeFullPath, PATHINFO_EXTENSION);
+        $mimeType = $extension === 'svg' ? 'image/svg+xml' : 'image/png';
+        
+        return 'data:' . $mimeType . ';base64,' . base64_encode($qrCodeContent);
     }
 }
 

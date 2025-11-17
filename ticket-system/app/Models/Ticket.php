@@ -46,5 +46,19 @@ class Ticket extends Model
             }
         });
     }
+
+    /**
+     * Get the verification URL for this ticket.
+     *
+     * @return string|null
+     */
+    public function getVerificationUrl(): ?string
+    {
+        if (!$this->verification_token) {
+            return null;
+        }
+
+        return route('api.verify-ticket', ['token' => $this->verification_token]);
+    }
 }
 
