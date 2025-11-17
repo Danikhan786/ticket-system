@@ -100,7 +100,7 @@ class FrontendController extends Controller
         $filePath = $publicPath . '/' . $filename;
 
         // Generate QR code with ticket detail page URL
-        $ticketUrl = route('tickets.show', ['ticket_id' => $ticket->ticket_id]);
+        $ticketUrl = route('admin.tickets.show', ['ticket_id' => $ticket->ticket_id]);
         
         QrCode::format('svg')
             ->size(300)
