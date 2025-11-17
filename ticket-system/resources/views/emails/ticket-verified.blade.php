@@ -186,8 +186,7 @@
         <div class="qr-code">
             <h3 style="color: #610B0C; margin-bottom: 15px;">Your QR Code</h3>
             <p style="margin-bottom: 15px; color: #666;">Please present this QR code at the event entrance:</p>
-            {{-- <img src="{{ $qrCodeBase64 }}" alt="Ticket QR Code"> --}}
-            <img src="https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fHww" alt="Ticket QR Code">
+            <img src="{{ $qrCodeBase64 }}" alt="Ticket QR Code">
             <p style="margin-top: 15px; font-size: 12px; color: #777;">
                 Verification URL: <a href="{{ $ticket->getVerificationUrl() }}" style="color: #610B0C;">{{ $ticket->getVerificationUrl() }}</a>
             </p>
