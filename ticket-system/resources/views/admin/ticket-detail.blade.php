@@ -246,7 +246,7 @@
     </div>
     
     <div style="text-align: center;">
-        <a href="{{ route('dashboard') }}" class="btn-home">← Back to Home</a>
+        <a href="{{ route('admin.tickets.index') }}" class="btn-home">← Back to All Tickets</a>
     </div>
 </div>
 @endsection
